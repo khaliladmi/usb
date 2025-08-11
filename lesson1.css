@@ -1,0 +1,167 @@
+/* Importation de la police arabe */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background: linear-gradient(to bottom, #1a1a2e, #16213e, #0f3460);
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+/* En-tête */
+header {
+    background: rgba(255, 255, 255, 0.1);
+    text-align: center;
+    padding: 30px 0;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
+}
+
+/* Conteneur principal */
+.intro-container {
+    width: 85%;
+    margin: auto;
+    padding: 30px 0;
+}
+
+/* Sections */
+.intro-section {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    text-align: right;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Animation au scroll */
+.intro-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Images */
+.intro-section img {
+    width: 30%;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.2);
+    
+}
+
+/* Liste des avantages */
+.intro-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.intro-section ul li {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    font-size: 18px;
+    text-align: right;
+    display: flex;
+    align-items: center;
+}
+
+.intro-section ul li::before {
+    content: "⭐";
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+/* Citations */
+blockquote {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-left: 5px solid #ffcc00;
+    font-style: italic;
+    margin: 20px 0;
+    text-align: center;
+    font-size: 20px;
+    color: #ffcc00;
+}
+
+/* Pied de page */
+footer {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+    box-shadow: 0px -5px 15px rgba(255, 255, 255, 0.2);
+}
+/* Conteneur principal */
+.intro-container {
+    width: 85%;
+    margin: auto;
+    padding: 30px 0;
+}
+
+/* Sections */
+.intro-section {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    text-align: right;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+
+    /* Nouvelle structure en flexbox */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Texte de la section */
+.intro-section .text {
+    width: 65%; /* Texte prend 65% de la largeur */
+}
+
+/* Images */
+.intro-section img {
+    width: 40%; /* L'image prend 30% de la largeur */
+    max-width: 350px;
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Inverser les éléments pour les sections paires */
+.intro-section:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* Animation au scroll */
+.intro-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Mode responsive (mobile) */
+@media (max-width: 768px) {
+    .intro-section {
+        flex-direction: column !important;
+        text-align: center;
+    }
+
+    .intro-section .text,
+    .intro-section img {
+        width: 100%;
+    }
+}

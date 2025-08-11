@@ -1,0 +1,208 @@
+/* Importation de la police arabe */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+/* En-tête */
+header {
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .logo img {
+    width: 100px;
+    margin-left: 10px;
+}
+
+/* Style de la section contenant l'image */
+.image1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+/* Style de l'image */
+.image1 img {
+    width: 400%;
+    max-width: 1200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Effet de zoom au survol */
+.image1 img:hover {
+    transform: scale(1.05);
+}
+
+/* Navigation */
+nav {
+    background: #4000ff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    position: relative;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+    margin: 0 15px;
+}
+
+/* Style des liens */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background: #ffffff;
+    color: black;
+    border-radius: 5px;
+}
+
+/* Menu déroulant pour "الدروس" */
+.dropdown {
+    position: relative;
+}
+
+.non-clickable {
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    cursor: pointer;
+    display: block;
+}
+
+/* Style du menu déroulant (caché par défaut) */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: white;
+    width: 200px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    top: 100%;
+    right: 0;
+    text-align: right;
+    z-index: 1000;
+}
+
+.dropdown-menu li {
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown-menu li:last-child {
+    border-bottom: none;
+}
+
+/* Style des liens du menu déroulant */
+.dropdown-menu li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    transition: 0.3s;
+}
+
+.dropdown-menu li a:hover {
+    background: #004cff;
+    color: black;
+    border-radius: 5px;
+}
+
+/* Afficher le menu déroulant lorsqu'on clique */
+.dropdown.active .dropdown-menu {
+    display: block;
+}
+
+/* Sections */
+main {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Section d'introduction améliorée */
+.introduction, .chess-psychology, .chess-definition {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.introduction h2, .chess-psychology h2, .chess-definition h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.introduction p, .chess-psychology p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.chess-psychology ul {
+    list-style: none;
+    padding: 0;
+}
+
+.chess-psychology ul li {
+    background: #f9f9f9;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+/* Contenu */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.content-box {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.content-box:hover {
+    transform: scale(1.05);
+}
+
+/* Pied de page */
+footer {
+    text-align: center;
+    background: #222;
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+}
